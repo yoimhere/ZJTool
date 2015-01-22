@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7255B7A4-0DFD-4C18-A7FF-F8A0C7625420</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ZJToolDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ebf75ce6-f68e-83ab-bf33-ce57b7db7bff</key>
+		<string>https://yo_imhere%40163.com@github.com/yoimhere/ZJTool.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/ZJToolDemo/ZJToolDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ebf75ce6-f68e-83ab-bf33-ce57b7db7bff</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ebf75ce6-f68e-83ab-bf33-ce57b7db7bff</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ebf75ce6-f68e-83ab-bf33-ce57b7db7bff</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZJTool.git</string>
+		</dict>
+	</array>
+</dict>
+</plist>
