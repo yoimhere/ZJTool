@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZJToastM;
 @interface ZJToast : NSObject
 
 //@property (nonatomic, assign) BOOL shouldWait;//是否等待前面的消息。。。不等待直接不提示，等待前面的显示完则立即显示 默认不等待
@@ -17,10 +18,7 @@
 //- (void)showInView:(UIView *)view;
 //- (void)cancel;
 
-+(void)showToast;
++(void)showToastWithToastM :(ZJToastM *)toastM;
++(void)showToastInView:(UIView *)parantView toastM :(ZJToastM *)toastM;
+
 @end
-
-
-extern const NSUInteger ZJToastDurationShort;
-extern const NSUInteger ZJToastDurationNormal;
-extern const NSUInteger ZJToastDurationLong;

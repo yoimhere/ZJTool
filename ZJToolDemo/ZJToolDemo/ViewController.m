@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "ZJTool.h"
+#import "ZJToastM.h"
 
 @interface ViewController ()
 
@@ -16,12 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+    [tap addTarget:self action:@selector(tap)];
+    [self.view addGestureRecognizer:tap];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)tap
+{
+    static int i = 0;
+    ZJToastM *toastM = [[ZJToastM alloc] init];
+    toastM.duration = 1;
+    toastM.msg = [NSString stringWithFormat:@"---%d---",i];
+    [ZJToast showToastWithToastM:toastM];
+    i++;
 }
+
 
 @end

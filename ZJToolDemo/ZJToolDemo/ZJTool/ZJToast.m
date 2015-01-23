@@ -7,19 +7,14 @@
 //
 
 #import "ZJToast.h"
-#import "UIView+ZJFrame.h"
-
-const NSUInteger ZJToastDurationShort  = 1;
-const NSUInteger ZJToastDurationNormal = 2;
-const NSUInteger ZJToastDurationLong   = 4;
+#import "ZJToastM.h"
 
 static ZJToast *defaultToast = nil;
 
 @interface ZJToast ()
 
-@property (nonatomic, assign) NSUInteger duration;
+@property (nonatomic, assign) NSUInteger currentDuration;
 @property (nonatomic, strong) UILabel *toastLb;
-@property (nonatomic, strong) NSMutableArray *toastTexts;
 
 @end
 
@@ -36,7 +31,7 @@ static ZJToast *defaultToast = nil;
 }
 
 
--(void)showInView :(UIView *)parentView
+-(void)showInView :(UIView *)parentView toastM:(ZJToastM *)toastM
 {
     if (parentView == nil) {
         parentView  = [UIApplication sharedApplication].keyWindow;
@@ -44,14 +39,13 @@ static ZJToast *defaultToast = nil;
     
     [parentView addSubview:self.toastLb];
     self.toastLb.center = parentView.center;
-    [self setToastLbText:@"您好您好您好您好您好您好您好您好!"];
+    [self setupToastLbText:toastM.msg];
     [self fadeToastIn];
-    [self performSelector:@selector(fadeToastOut) withObject:nil afterDelay:self.duration];
+    [self performSelector:@selector(fadeToastOut) withObject:nil afterDelay:toastM.duration];
 }
 
--(void)setToastLbText:(NSString *)text
+-(void)setupToastLbText:(NSString *)text
 {
-    
     self.toastLb.text = text;
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
@@ -60,7 +54,7 @@ static ZJToast *defaultToast = nil;
     CGSize size = [text boundingRectWithSize:CGSizeMake(self.toastLb.frame.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
    
     CGRect frame = self.toastLb.frame;
-    frame.size.height = size.height < 100 ? 100 : size.height;
+    frame.size.height = size.height < 60 ? 60 : size.height;
     self.toastLb.frame = frame;
 }
 
@@ -78,18 +72,20 @@ static ZJToast *defaultToast = nil;
 {
     [UIView animateWithDuration:0.5 animations:^{
         self.toastLb.alpha = 0;
-    } completion:^(BOOL finished) {
-        self.duration = ZJToastDurationNormal;
     }];
 }
 
 #pragma mark -
 #pragma mark - 类方法
-+(void)showToast {
-    if (defaultToast == nil) {
-        [self shareToast];
-    }
-    [defaultToast showInView:nil];
+
++(void)showToastWithToastM:(ZJToastM *)toastM
+{
+    [self showToastInView:nil toastM:toastM];
+}
+
++(void)showToastInView:(UIView *)parantView toastM:(ZJToastM *)toastM
+{
+    [[self shareToast] showInView:parantView toastM:toastM];
 }
 
 
@@ -122,14 +118,6 @@ static ZJToast *defaultToast = nil;
     return _toastLb;
 }
 
--(NSMutableArray *)toastTexts
-{
-    if (_toastTexts == nil)
-    {
-        _toastTexts = [NSMutableArray arrayWithCapacity:1];
-    }
-    return _toastTexts;
-}
 @end
 
 

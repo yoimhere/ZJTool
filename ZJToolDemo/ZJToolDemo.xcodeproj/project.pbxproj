@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		018BAC9D1A71F641004C67D3 /* ZJToastM.m in Sources */ = {isa = PBXBuildFile; fileRef = 018BAC9C1A71F641004C67D3 /* ZJToastM.m */; };
 		019D4E7E1A70D440007FA17A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 019D4E7D1A70D440007FA17A /* main.m */; };
 		019D4E811A70D440007FA17A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 019D4E801A70D440007FA17A /* AppDelegate.m */; };
 		019D4E841A70D440007FA17A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019D4E831A70D440007FA17A /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		018BAC9B1A71F641004C67D3 /* ZJToastM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJToastM.h; path = Category/ZJToastM.h; sourceTree = "<group>"; };
+		018BAC9C1A71F641004C67D3 /* ZJToastM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZJToastM.m; path = Category/ZJToastM.m; sourceTree = "<group>"; };
 		019D4E781A70D43F007FA17A /* ZJToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		019D4E7C1A70D440007FA17A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		019D4E7D1A70D440007FA17A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				019D4EA21A70D477007FA17A /* Category */,
 				019D4EA51A70D477007FA17A /* ZJToast.h */,
 				019D4EA61A70D477007FA17A /* ZJToast.m */,
+				018BAC9B1A71F641004C67D3 /* ZJToastM.h */,
+				018BAC9C1A71F641004C67D3 /* ZJToastM.m */,
 				019D4EA71A70D477007FA17A /* ZJTool.h */,
 			);
 			path = ZJTool;
@@ -250,6 +255,7 @@
 				019D4E841A70D440007FA17A /* ViewController.m in Sources */,
 				019D4E811A70D440007FA17A /* AppDelegate.m in Sources */,
 				019D4EA81A70D477007FA17A /* UIView+ZJFrame.m in Sources */,
+				018BAC9D1A71F641004C67D3 /* ZJToastM.m in Sources */,
 				019D4E7E1A70D440007FA17A /* main.m in Sources */,
 				019D4EA91A70D477007FA17A /* ZJToast.m in Sources */,
 			);
@@ -374,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZJToolDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -384,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZJToolDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -442,6 +450,7 @@
 				019D4E9D1A70D440007FA17A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		019D4E9E1A70D440007FA17A /* Build configuration list for PBXNativeTarget "ZJToolDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +459,7 @@
 				019D4EA01A70D440007FA17A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
